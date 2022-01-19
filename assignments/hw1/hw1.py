@@ -2,8 +2,8 @@
 Name: <Faith Kelley>
 <ProgramName>.py
 
-Problem: < The problem we are solving would  be  common ways,  by using formulas for this coding assignment you will
-be able to  get the correct amounts >
+Problem: < The problem we are solving would  be  common ways,  by using formulas
+ for this coding assignment you will be able to  get the correct amounts >
 
 Certification of Authenticity:
 <include one of the following>
@@ -42,7 +42,7 @@ def coffee():
 
 def kilometers_to_miles():
     kilo = eval(input("how many kilometers did you travel?: "))
-    miles = kilo * 0.621371
+    miles = kilo * 0.6211180124223602
     print("thats", miles, "miles!")
 
 
