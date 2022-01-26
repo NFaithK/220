@@ -26,3 +26,5 @@ def means():
     print(rms_s)
     print(hm_s)
     print(gm_s)
+
+
