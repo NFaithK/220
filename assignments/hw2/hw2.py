@@ -2,13 +2,12 @@
 Name: <your name goes here – first and last>
 <ProgramName>.py
 
-Problem: <Brief, one or two sentence description of the problem
- that this program solves, in your own words.>
+Problem: < this homework is to help use be able to use arithmetic in
+look forms and to figure out formula>
 
 Certification of Authenticity:
 <include one of the following>
-I certify that this assignment is entirely my own work.
-I certify that this assignment is my own work, but I discussed it with: <Name(s)>
+I certify that this assignment is my own work, but I discussed it with: brooke from CSL tutoring center>
 """
 import math
 
@@ -16,12 +15,10 @@ import math
 def sum_of_threes():
     multiple_sum = 0
     upper_bound = eval(input("what is your upper bound: "))
-    for i in range(upper_bound):
-        multiple_sum = (upper_bound + multiple_sum)
-    print(multiple_sum)
+    for i in range(1, int(upper_bound/3)+1):
+        multiple_sum += 3 * i
 
-
-print()
+    print("sum of threes is", multiple_sum)
 
 
 def multiplication_table():
@@ -29,7 +26,7 @@ def multiplication_table():
         for j in range(1, 11):
             print(i * j, end='\t')
 
-    print('')
+        print()
 
 
 def triangle_area():
@@ -47,18 +44,21 @@ def triangle_area():
 
 
 def sum_squares():
-    lower_range = eval(input("enter your lower range:"))
-    upper_range = eval(input("enter your upper range:"))
-    range_r = list(range(lower_range, upper_range + 1))
-
-    print(range_e)
+    sum_squ = 0
+    lower_range = eval(input("Enter  lower range: "))
+    upper_range = eval(input("Enter upper range: "))
+    for i in range(lower_range, upper_range+1):
+        sum_squ = (i * i) + sum_squ
+    print(sum_squ)
 
 
 def power():
+    expo_product = 1
     base = eval(input("Enter base:"))
     exponent = eval(input("enter exponent: "))
-    answer = base ** exponent
-    print(base, "^", exponent, "=", answer)
+    for i in range(exponent):
+        expo_product = base * expo_product
+    print(base, "^", exponent, "=", expo_product)
 
 
 if __name__ == '__main__':
