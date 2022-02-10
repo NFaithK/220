@@ -35,6 +35,7 @@ def horsepower():
     horse_power = watts * 745.7 / 745.7
     print("your total horse power is:", horse_power)
 
+
 # chapter 5/ strings,
 # strings-are sequence of character """" Ex. "hello, world!"
 # list- are sequences of any object [ you initialize a list with  square brackets]
@@ -76,3 +77,8 @@ def horsepower():
 # you can also do negative numbers for example [ 12:6:-1] dlrow or 12::-1]
 # for slicing a list, you will always get a list return b[1:2] = b[1]
 
+from graphics import *
+
+
+def triangle():
+    win = graphwin("draw a triangle")
