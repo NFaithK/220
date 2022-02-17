@@ -14,11 +14,17 @@ def triangle():
     p3 = win.getMouse()
     tri = Polygon(p1, p2, p3)
     tri.draw(win)
-    length = abs(p2.getX() - p1.getX() + (p3.getX() - p2.getX()) + (p3.getX() - p1.getX()))
+    length_1 = abs(p2.getX() - p1.getX())
+    length_2 = abs(p3.getX() - p2.getX())
+    length_3 = abs(p3.getX() - p1.getX())
     width = abs(p2.getY() - p1.getY()) + (p3.getY() - p2.getY()) + (p3.getY() - p1.getY())
-    area = length / 2
-    area= math.sqrt()
-    area_message = Text(Point(250, 350), "area: " + str(area))
+    length = length_1 + length_2 + length_3
+    side_s = length / 2
+    a = abs(side_s - length_1)
+    b = abs(side_s - length_2)
+    c = abs(side_s - length_3)
+    area_t = a + b + c
+    area_message = Text(Point(250, 350), "area: " + str(area_t))
     area_message.draw(win)
     peri = 2 * (length + width)
     perimeter_message = Text(Point(250, 450), "perimeter: " + str(peri))
@@ -31,14 +37,14 @@ def color_shape():
     '''Create code to allow a user to color a shape by entering rgb amounts'''
 
     # create window
-    win_width = 600
-    win_height = 600
+    win_width = 400
+    win_height = 400
     win = GraphWin("Color Shape", win_width, win_height)
     win.setBackground("white")
 
     # create text instructions
     msg = "Enter color values between 0 - 255\nClick window to color shape"
-    inst = Text(Point(win_width / 3, win_height - 30), msg)
+    inst = Text(Point(win_width / 2, win_height - 20), msg)
     inst.draw(win)
 
     # create circle in window's center
@@ -47,7 +53,7 @@ def color_shape():
     shape.draw(win)
 
     # redTexPt is 50 pixels to the left and forty pixels down from center
-    red_text_pt = Point(win_width / 2 - 60, win_height / 2 + 70)
+    red_text_pt = Point(win_width / 2 - 50, win_height / 2 + 40)
     red_text = Text(red_text_pt, "Red: ")
     red_text.setTextColor("red")
 
@@ -86,7 +92,8 @@ def process_string():
     print(char_positions)
     print(con_let)
     print(three_cha)
-    print(string)
+    for letter in string:
+        print(letter, '\t')
     print(string_len)
 
 
@@ -112,8 +119,33 @@ def process_list():
 
 
 def another_series():
-    pass
+
+    terms = eval(input("how many terms:"))
+    for i in (1, terms):
+        even = ((i - 1) % 2) + i + 1
+    print(even)
 
 
 def target():
-    pass
+    win = GraphWin("Target", 500, 500)
+    circ_1 = Circle(Point(250, 250), 250)
+    circ_1.setFill("red")
+    circ_2 = Circle(Point(250, 250), 200)
+    circ_2.setFill("blue")
+    circ_3 = Circle(Point(250, 250), 150)
+    circ_3.setFill("black")
+    circ_4 = Circle(Point(250, 250), 100)
+    circ_4.setFill("white")
+    circ_5 = Circle(Point(250, 250), 50)
+    circ_5.setFill("yellow")
+    message = Text(Point(250, 250), "Click to close")
+    message.setStyle("bold")
+    message.setTextColor("red")
+    circ_1.draw(win)
+    circ_2.draw(win)
+    circ_3.draw(win)
+    circ_4.draw(win)
+    circ_5.draw(win)
+    message.draw(win)
+    win.getMouse()
+    win.close()
