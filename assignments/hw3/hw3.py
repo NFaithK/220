@@ -50,8 +50,7 @@ def pi():
         num = ((i - 1) % 2) + i + 1
         den = i + (i % 2) + 1
         product = product * float(num) / float(den)
-    print(product * 2)
-
+    print(num ** 2)
 
 if __name__ == '__main__':
     pass

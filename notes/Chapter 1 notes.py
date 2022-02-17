@@ -76,9 +76,49 @@ def horsepower():
 # before the number  you picked or a colon after for everything  after the number you picked
 # you can also do negative numbers for example [ 12:6:-1] dlrow or 12::-1]
 # for slicing a list, you will always get a list return b[1:2] = b[1]
+# when you slice a list you  will always return a list
+# [ <start>:<stop>: <step>]
+# days[1:4]( this is actually a list)
 
-from graphics import *
+def name():
+    first_name = input("Enter your  first name:")
+    last_name = input("Enter your last name: ")
+    first_letter = first_name[0]
+    last_seven = last_name[:7]
+    print("Username:" + first_letter + last_seven)
 
 
-def triangle():
-    win = graphwin("draw a triangle")
+def month():
+    months = "janfebmaraprmayjunjulaugsepoctnovdec"
+    month = eval(input("enter a month:"))
+    start_index = month * 3 - 3
+    stop_index = start_index + 3
+    month_finish = monthS[start_index: stop_index]
+
+
+# chapter 5 unicode
+# encoding-  giving a number to a letter of the alphabet
+# decoding - reverse of encoding
+# unicode -
+# ord - ordinal or meaning what is the number for example ord(a)
+# the character function takes in a string and produces a character
+
+
+def encode():
+    word = input("enter a word:")
+    output = " "
+    for letter in word:
+        output = output + str(ord(letter)) + " "
+        print(output[:-1])
+
+
+def decode():
+    numbers = input("enter unicode string:")
+    num_list = numbers.split()
+    output = " "
+    for num in num_list:
+        output = output + chr(eval(num))
+    print(output)
+
+# int, float, string, eval will convert everything to a string
+
