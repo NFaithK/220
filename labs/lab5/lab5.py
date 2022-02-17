@@ -56,29 +56,32 @@ def color_shape():
     red_text_pt = Point(win_width / 2 - 50, win_height / 2 + 40)
     red_text = Text(red_text_pt, "Red: ")
     red_text.setTextColor("red")
-    inputBox = Entry(Point(200, 240), 5)
-    inputBox.draw(win)
+    inputBox_r = Entry(Point(200, 240), 5)
+    inputBox_r.draw(win)
 
     # green_text_pt is 30 pixels down from red
     green_text_pt = red_text_pt.clone()
     green_text_pt.move(0, 30)
     green_text = Text(green_text_pt, "Green: ")
     green_text.setTextColor("green")
-    inputBox = Entry(Point(200, 270), 5)
-    inputBox.draw(win)
+    inputBox_g = Entry(Point(200, 270), 5)
+    inputBox_g.draw(win)
 
     # blue_text_pt is 60 pixels down from red
     blue_text_pt = red_text_pt.clone()
     blue_text_pt.move(0, 60)
     blue_text = Text(blue_text_pt, "Blue: ")
     blue_text.setTextColor("blue")
-    inputBox = Entry(Point(200, 300), 5)
-    inputBox.draw(win)
+    inputBox_b = Entry(Point(200, 300), 5)
+    inputBox_b.draw(win)
 
     # display rgb text
     red_text.draw(win)
     green_text.draw(win)
     blue_text.draw(win)
+
+    for i in range(5):
+        color_rgb(inbox_r,inbox_b,inbox_g)
 
     # Wait for another click to exit
     win.getMouse()
