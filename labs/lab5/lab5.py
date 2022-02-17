@@ -56,18 +56,24 @@ def color_shape():
     red_text_pt = Point(win_width / 2 - 50, win_height / 2 + 40)
     red_text = Text(red_text_pt, "Red: ")
     red_text.setTextColor("red")
+    inputBox = Entry(Point(200, 240), 5)
+    inputBox.draw(win)
 
     # green_text_pt is 30 pixels down from red
     green_text_pt = red_text_pt.clone()
     green_text_pt.move(0, 30)
     green_text = Text(green_text_pt, "Green: ")
     green_text.setTextColor("green")
+    inputBox = Entry(Point(200, 270), 5)
+    inputBox.draw(win)
 
     # blue_text_pt is 60 pixels down from red
     blue_text_pt = red_text_pt.clone()
     blue_text_pt.move(0, 60)
     blue_text = Text(blue_text_pt, "Blue: ")
     blue_text.setTextColor("blue")
+    inputBox = Entry(Point(200, 300), 5)
+    inputBox.draw(win)
 
     # display rgb text
     red_text.draw(win)
@@ -119,11 +125,11 @@ def process_list():
 
 
 def another_series():
-
+    acc = 0
     terms = eval(input("how many terms:"))
-    for i in (1, terms):
-        even = ((i - 1) % 2) + i + 1
-    print(even)
+    for i in (0, terms):
+        even = ((i - 1) % 2) + i + 2 + acc
+    print(even * 2)
 
 
 def target():
