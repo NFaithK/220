@@ -18,16 +18,15 @@ def cash_converter():
 
 
 def encode():
-    acc =""
+    acc = ""
     message = (input("enter a message:"))
     key = eval(input("enter a key:"))
     for ch in message:
         name = (ord(ch))
-        name_n = name+ key
+        name_n = name + key
         name_ch = chr(name_n)
-        acc = acc+name_ch
+        acc = acc + name_ch
     print(acc)
-
 
 
 def sphere_area(radius):
@@ -51,20 +50,28 @@ def sum_n_cubes(number):
 
 
 def encode_better():
-    acc = 0
-    message = input("enter a message: ")
-    key = eval(input("enter a key: "))
+    finished_t = ""
+    message = input("enter the message: ")
+    key = input("Enter a key")
     for i in range(len(message)):
-if __name__ == '__main__':
-    # cash_converter()
-    # encode()
-    # res = sphere_area(13)
-    # print(res)
-    # res = sphere_volume(13)
-    # print(res)
-    # res = sum_n(100)
-    # print(res)
-    # res = sum_n_cubes(13)
-    # print(res)
-    # encode_better()
+        cypher = (ord(message[i])) - 65
+        key_f = (ord(key[i % len(key)])) - 65
+        number = (cypher + key_f) % 58
+        cypher_b = number + 65
+        finished = (chr(cypher_b))
+        finished_t = finished_t + finished
+    print(finished_t)
 
+if __name__ == '__main__':
+    pass
+        # cash_converter()
+        # encode()
+        # res = sphere_area(13)
+        # print(res)
+        # res = sphere_volume(13)
+        # print(res)
+        # res = sum_n(100)
+        # print(res)
+        # res = sum_n_cubes(13)
+        # print(res)
+        # encode_better()
