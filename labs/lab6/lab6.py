@@ -7,6 +7,7 @@ I certify that I am the only  one   doing this work"""
 from graphics import *
 
 
+
 def vigenere():
     acc = ""
     win = GraphWin("Vigenere cypher", 700, 700)

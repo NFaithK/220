@@ -18,12 +18,15 @@ def cash_converter():
 
 
 def encode():
-
+    acc =""
     message = (input("enter a message:"))
     key = eval(input("enter a key:"))
     for ch in message:
         name = (ord(ch))
-        name_s= name.rstrip()
+        name_n = name+ key
+        name_ch = chr(name_n)
+        acc = acc+name_ch
+    print(acc)
 
 
 
@@ -52,14 +55,6 @@ def encode_better():
     message = input("enter a message: ")
     key = eval(input("enter a key: "))
     for i in range(len(message)):
-        cypher = (ord(message[i]))
-        cypher_k = cypher - 65
-        key_f = (ord(key[i % len(key)])) - 65
-        number = (cypher_k + key_f) % 26
-        cypher_b = number + 65
-        cypher_chr = (chr(cypher_b))
-    print(cypher_chr + acc)
-
 if __name__ == '__main__':
     # cash_converter()
     # encode()
