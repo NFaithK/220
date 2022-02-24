@@ -48,17 +48,21 @@ def sum_n_cubes(number):
 
 
 def encode_better():
-    acc = 1
+    acc = 0
     message = input("enter a message: ")
     key = eval(input("enter a key: "))
-    for lm in key:
-        key = (chr(lm))
-        print(key * acc)
-
+    for i in range(len(message)):
+        cypher = (ord(message[i]))
+        cypher_k = cypher - 65
+        key_f = (ord(key[i % len(key)])) - 65
+        number = (cypher_k + key_f) % 26
+        cypher_b = number + 65
+        cypher_chr = (chr(cypher_b))
+    print(cypher_chr + acc)
 
 if __name__ == '__main__':
     # cash_converter()
-     #encode()
+    # encode()
     # res = sphere_area(13)
     # print(res)
     # res = sphere_volume(13)
