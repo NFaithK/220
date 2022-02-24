@@ -73,6 +73,11 @@ def word_average():
     for i in word_spl:
         sum = sum + len(i)
 
+
+
+
+
+
     print(sum/num_words)
 
 

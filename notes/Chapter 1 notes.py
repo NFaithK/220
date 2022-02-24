@@ -1,3 +1,6 @@
+import math
+
+
 def future():
     age = eval(input("enter your age: "))
     futureage = age + 20
@@ -88,12 +91,12 @@ def name():
     print("Username:" + first_letter + last_seven)
 
 
-def month():
-    months = "janfebmaraprmayjunjulaugsepoctnovdec"
-    month = eval(input("enter a month:"))
-    start_index = month * 3 - 3
-    stop_index = start_index + 3
-    month_finish = monthS[start_index: stop_index]
+# def month():
+# months = "janfebmaraprmayjunjulaugsepoctnovdec"
+# month = eval(input("enter a month:"))
+# start_index = month * 3 - 3
+# stop_index = start_index + 3
+# month_finish = month[start_index: stop_index]
 
 
 # chapter 5 unicode
@@ -120,5 +123,22 @@ def decode():
         output = output + chr(eval(num))
     print(output)
 
+
 # int, float, string, eval will convert everything to a string
+
+def happy():
+    print("happy birthday/ holiday to you")
+
+
+def sing(name):
+    happy()
+    happy()
+    print("Happy birthday dear {}!".format(name))
+    happy()
+
+ def sing( name, holiday):
+    happy(holiday)
+    happy(holiday)
+    print("Happy {} dear {}!". format(holiday, name))
+    happy(holiday)
 
