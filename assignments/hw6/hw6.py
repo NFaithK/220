@@ -3,7 +3,6 @@ Name: <your name goes here Faith Kelley>
 <Strings>.py
 
 Problem: <Brief, one or two sentence description of the problem that this program solves, in your own words.>
-
 Certification of Authenticity:
 <include one of the following>
 I certify that this assignment is my own work, but I discussed it with: < brook duvall from csl>
