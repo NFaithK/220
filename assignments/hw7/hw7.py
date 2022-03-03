@@ -2,11 +2,10 @@
 Name: <your name goes here – Faith Kelley>
 <Hw 7>.py
 
-Problem: <Brief, one or two sentence description of the problem that this program solves, in your own words.>
+Problem: <we are opening and closing files an.>
 
 Certification of Authenticity:
-<include one of the following>
-I certify that this assignment is entirely my own work.
+
 I certify that this assignment is my own work, but I discussed it with: <brooke duvall>
 """
 from encryption import *
@@ -52,6 +51,8 @@ def calc_check_sum(isbn):
         isbn_v = eval(isbn_r[9-i])
         acc = acc+(i+1) * isbn_v
     return int(acc)
+
+
 
 
 
