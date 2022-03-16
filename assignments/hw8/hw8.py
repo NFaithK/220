@@ -12,31 +12,56 @@ I certify that this assignment is my own work, but I discussed it with: <Name(s)
 
 
 def add_ten(nums):
-    pass
+    acc = 0
+    for i in nums:
+        acc = i + 10
+
 
 
 def square_each(nums):
-    pass
+    acc = 0
+    for i in nums:
+        acc = i ** 2
+
 
 
 def sum_list(nums):
-    pass
+    acc = 0
+    for i in nums:
+        acc = i + i
+
 
 
 def to_numbers(nums):
-    pass
+    acc = 0
+    for i in nums:
+        acc = float(int(i))
+
 
 
 def sum_of_square(nums):
-    pass
+    acc = 0
+    to_numbers(nums)
+    square_each(nums)
+    sum_list(nums)
+    return acc
+
 
 
 def starter(weight, wins):
-    pass
+    if 150 <= weight < 160 and wins > 5:
+        return True
+    if weight > 199 or wins > 20:
+        return True
+    else:
+        return False
 
 
 def leap_year(year):
-    pass
+    if year % 400 == 0:
+        return True
+    else:
+        return False
 
 
 def circle_overlap():

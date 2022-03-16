@@ -136,7 +136,7 @@ def sing(name):
     print("Happy birthday dear {}!".format(name))
     happy()
 
- def sing( name, holiday):
+ def ree( name, holiday):
     happy(holiday)
     happy(holiday)
     print("Happy {} dear {}!". format(holiday, name))
