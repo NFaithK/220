@@ -3,7 +3,7 @@ Lab8.py
  today we are  creating a game
   I certify i am the only person that is  working on this project"""
 import math
-import time
+
 from random import randint
 
 from graphics import *

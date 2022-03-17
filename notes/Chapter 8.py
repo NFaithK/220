@@ -8,12 +8,9 @@
 
 
 def is_game_over(player_one_points, player_two_points):
-    #if player_one_points >= 15 or player_two_points >= 15 >= 2:
-     #   won_by_two = abs(player_one_points, player_two_points)
-     #if ov
-      #  return True
-    #return False
-
+    if player_one_points >= 15 or player_two_points >= 15 >= 2:
+        won_by_two = abs(player_one_points, player_two_points)
+       return True
     player_one = 0
     player_two = 0
     print(player_one, player_two)
