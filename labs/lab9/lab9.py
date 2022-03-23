@@ -5,7 +5,10 @@ Name: <your name goes here – first and last>
 
 
 def build_board():
-    pass
+    ret = []
+    for i in range(1, 10):
+        ret.append(i)
+    return ret
 
 
 def print_board(board):
@@ -37,23 +40,57 @@ def print_board(board):
 
 
 def is_legal(board, position):
-    pass
+    legal = str(board[position - 1]).isnumeric()
+    return legal
 
 
 def fill_spot(board, position, character):
-    pass
+    str(board[position - 1]).replace(position, character)
+
 
 
 def winning_game(board):
-    pass
+    if board[1] == board[4] == board[7]:
+        return True
+    if board[2] == board[5] == board[8]:
+        return True
+    if board[3] == board[6] == board[9]:
+        return True
+    if board[1] == board[2] == board[3]:
+        return True
+    if board[4] == board[5] == board[6]:
+        return True
+    if board[7] == board[8] == board[9]:
+        return True
+    if board[1] == board[5] == board[9]:
+        return True
+    if board[3] == board[5] == board[7]:
+        return True
+    else:
+        return False
+
 
 
 def game_over(board):
-    pass
+    for position in range(1,10):
+        if is_legal(board,position):
+            return False
+        if winning_game(board):
+            return True
 
 
 def get_winner(board):
-    pass
+    acc_o= 0
+    acc_x = 0
+
+    if game_over(board) is False:
+        return False
+    counters = " "
+    for position in (0,9)
+        board_count = board_count + counters
+
+    if character[x] > character[o]:
+        return print("congrats! x wins!")
 
 
 def play(board):

@@ -64,6 +64,7 @@ def quadratic(a, b, c):
               max_value = b
           if c > max_value:
               max_value = c
+
 #def max(values)
 #max_value values[0]
 # for value in values

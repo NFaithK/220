@@ -19,12 +19,9 @@ def add_ten(nums):
         nums[i] = nums[i]+10
 
 
-
-
 def square_each(nums):
     for i in range(len(nums)):
         nums[i] = nums[i]**2
-
 
 
 def sum_list(nums):
@@ -32,7 +29,6 @@ def sum_list(nums):
     for i in nums:
         acc = i + acc
     return acc
-
 
 def to_numbers(nums):
     for i in range(len(nums)):

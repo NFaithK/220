@@ -23,21 +23,15 @@ def number_words(in_file_name, out_file_name):
 
 
 
-
-
-
-
-
-
 def hourly_wages(in_file_name, out_file_name):
-    new_file = open(in_file_name, 'r')
-    new_file_r = new_file.read()
-    out_file = open(out_file_name, 'a')
-    content = new_file_r.split("\n")
-    for line in content:
-        line_content = line.split()
-        wage = eval(line_content[2])
-        hours = eval(line_content[3])
+    new_file = open(in_file_name, 'r') # you are reading  from this file
+    new_file_r = new_file.read() # reading the  new file
+    out_file = open(out_file_name, 'a') # we are appending the new file
+    content = new_file_r.split("\n")  # we are using the  new line character for  the split method
+    for line in content: # for loop
+        line_content = line.split() # we are splitting the  line by spaces
+        wage = eval(line_content[2]) # we are evaling the  line content  that we  indexed
+        hours = eval(line_content[3]) # we are  evaling the line content we pulled from the
         pay = str((wage * hours)+(1.65 * hours))
         out_file.write(line_content[0] + " " + " " + line_content[1] + " " + " "+pay)
     new_file.close()
@@ -51,11 +45,6 @@ def calc_check_sum(isbn):
         isbn_v = eval(isbn_r[9-i])
         acc = acc+(i+1) * isbn_v
     return int(acc)
-
-
-
-
-
 
 
 

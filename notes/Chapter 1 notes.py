@@ -142,3 +142,15 @@ def sing(name):
     print("Happy {} dear {}!". format(holiday, name))
     happy(holiday)
 
+def names():
+    name = input("Enter  a list of names separated by comas:") # we asked the   user  to input a name  using a commas
+    name_spl = name.split(", ") # we split the word using the comma what was inputed
+    slice = "" # accumulator sort of
+    for i in name_spl:
+        current_name = i.split()
+        first = current_name[0]
+        last = current_name[1]
+        first_n = first[0:1]
+        last_n = last[0:1]
+        slice = slice + first_n + last_n + " "
+    print(slice)
