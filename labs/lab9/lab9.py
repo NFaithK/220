@@ -45,8 +45,9 @@ def is_legal(board, position):
 
 
 def fill_spot(board, position, character):
+    character = character.strip()
+    character = character.lower()
     str(board[position - 1]).replace(position, character)
-
 
 
 def winning_game(board):
@@ -70,35 +71,81 @@ def winning_game(board):
         return False
 
 
-
 def game_over(board):
-    for position in range(1,10):
-        if is_legal(board,position):
-            return False
-        if winning_game(board):
+    for position in range(1, 10):
+        if is_legal(board, position):
+            return True
+        else:
+            no = False
+            count = 0
+        if not no or count <= len(board):
+            for i in range(len(board)):
+                no = str(board[i]).isnumeric()
+                if no:
+                    return False
+        else:
             return True
 
 
 def get_winner(board):
-    acc_o= 0
-    acc_x = 0
-
-    if game_over(board) is False:
-        return False
-    counters = " "
-    for position in (0,9)
-        board_count = board_count + counters
-
-    if character[x] > character[o]:
-        return print("congrats! x wins!")
+    if winning_game(board):
+        if board[1] == board[4] == board[7]:
+            return board[1]
+        if board[2] == board[5] == board[8]:
+            return board[2]
+        if board[3] == board[6] == board[9]:
+            return board[3]
+        if board[1] == board[2] == board[3]:
+            return board[1]
+        if board[4] == board[5] == board[6]:
+            return board[4]
+        if board[7] == board[8] == board[9]:
+            return board[7]
+        if board[1] == board[5] == board[9]:
+            return board[1]
+        if board[3] == board[5] == board[7]:
+            return board[3]
+        else:
+            return None
+    elif game_over(board):
+        return None
 
 
 def play(board):
-    pass
+    ans = "Yes"
+    ttt_x = "x"
+    ttt_o = "o"
+    while ans[0].lower() == 'y':
+        while not game_over(board):
+            print_board(board)
+            x_location = eval(input("X's choose a position"))
+            if is_legal(board,x_location):
+                fill_spot(board, x_location,ttt_x)
+            else:
+                print("choose a different position")
+
+            print_board(board)
+            if not game_over(board):
+
+                o_location = eval(input("O's choose a position"))
+                if is_legal(board, o_location):
+                    fill_spot(board, o_location, ttt_o)
+                else:
+                    print("choose a different position")
+            if get_winner(board) == "x":
+                print("X's win")
+            elif get_winner(board) == "o":
+                    print("O's win")
+            else:
+                print("Tie")
+            ans = input("Do you want to keep playing?")
+            board = build_board()
+
 
 
 def main():
-    pass
+    board = build_board()
+    play(board)
 
 
 if __name__ == '__main__':
