@@ -39,11 +39,11 @@ class Door:
 
     def open(self, color, label):
         self.shape.setFill(color)
-        self.text.getText(label)
+        self.text.setText(label)
 
     def close(self, color, label):
         self.shape.setFill(color)
-        self.text.getText(label)
+        self.text.setText(label)
 
     def color_door(self, color):
         self.shape.setFill(color)

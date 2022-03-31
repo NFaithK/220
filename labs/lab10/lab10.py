@@ -18,7 +18,7 @@ def main():
     door_class.draw(win)
 
     click_door = win.getMouse()
-    while not exit_class.is_clicked:
+    while not exit_class.is_clicked(click_door):
         if exit_class.is_clicked(click_door):
             win.close()
         if door_class.is_clicked(click_door):
@@ -26,6 +26,5 @@ def main():
                 door_class.open("white", "open")
                 door_class.set_secret(True)
             elif door_class.is_secret():
-                door_class.close("red", "Closed")
+                door_class.close("red", "closed")
                 door_class.set_secret(False)
-            click_door = win.getMouse()
