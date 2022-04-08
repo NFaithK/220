@@ -30,6 +30,3 @@ def syracuse(number):
             add.append(number)
     return add
 
-
-def goldbach(n):
-pass
