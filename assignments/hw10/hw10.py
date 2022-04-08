@@ -32,9 +32,4 @@ def syracuse(number):
 
 
 def goldbach(n):
-    prime = range(1, n)
-    print (prime)
-
-    add = []
-    if n % 2 != 0:
-        return add
+pass
