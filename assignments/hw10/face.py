@@ -24,7 +24,9 @@ class Face:
         self.mouth.draw(window)
 
     def smile(self):
-        pass
+        mouth_center = self.mouth.getCenter()
+        muth_center_clone = mouth_center.clone()
+
 
     def shock(self):
         pass
