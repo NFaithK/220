@@ -1,3 +1,9 @@
+"""Faith Kelley
+Lab 13
+ i certify  i am doing my own work"""
+
+
+
 def trade_alert(file_name):
     file = file_name
     open_file = open(file, 'r')
