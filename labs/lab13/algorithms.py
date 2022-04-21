@@ -40,7 +40,7 @@ def selection_sort(values):
     value = 0
     for i in range(len(values)):
         min_v = i
-        for j in range(i + 1, len(values)):
+        for j in range(value, len(values)):
             if values[min_v] > values[j]:
                 min_v = j
 
